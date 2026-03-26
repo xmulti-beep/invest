@@ -35,6 +35,7 @@
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 13px;
     min-height: 100vh;
+    padding-top: 68px;
   }
 
   /* 헤더 */
@@ -45,9 +46,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 100;
+    left: 0;
+    right: 0;
+    z-index: 1000;
   }
 
   .header-left h1 {
@@ -182,8 +185,9 @@
     font-size: 12px;
   }
 
-  td:first-child { text-align: left; font-family: 'Noto Sans KR', sans-serif; }
+  td:first-child { text-align: left; font-family: 'Noto Sans KR', sans-serif; position: sticky; left: 0; background: inherit; z-index: 2; }
   td:nth-child(2) { text-align: left; font-family: 'JetBrains Mono', monospace; color: var(--gray); }
+  th:first-child { position: sticky; left: 0; background: #0a1220; z-index: 3; }
   td:nth-child(3) { text-align: center; }
   td:nth-child(4) { text-align: center; color: var(--gray); }
 
